@@ -12,6 +12,8 @@
 		AAF57ED321235D7C00E0216B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAF57ED221235D7C00E0216B /* Assets.xcassets */; };
 		AAF57ED621235D7C00E0216B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF57ED421235D7C00E0216B /* LaunchScreen.storyboard */; };
 		AAF57ED921235D7C00E0216B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF57ED821235D7C00E0216B /* main.m */; };
+		AAF57EE721235F5F00E0216B /* WabiSabiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF57EE621235F5F00E0216B /* WabiSabiViewController.m */; };
+		AAF57EEA21235F7A00E0216B /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF57EE921235F7A00E0216B /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,10 @@
 		AAF57ED521235D7C00E0216B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAF57ED721235D7C00E0216B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAF57ED821235D7C00E0216B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AAF57EE521235F5F00E0216B /* WabiSabiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WabiSabiViewController.h; sourceTree = "<group>"; };
+		AAF57EE621235F5F00E0216B /* WabiSabiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WabiSabiViewController.m; sourceTree = "<group>"; };
+		AAF57EE821235F7A00E0216B /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		AAF57EE921235F7A00E0216B /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,10 @@
 		AAF57EE221235DB900E0216B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AAF57EE521235F5F00E0216B /* WabiSabiViewController.h */,
+				AAF57EE621235F5F00E0216B /* WabiSabiViewController.m */,
+				AAF57EE821235F7A00E0216B /* DetailViewController.h */,
+				AAF57EE921235F7A00E0216B /* DetailViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -168,8 +178,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAF57EE721235F5F00E0216B /* WabiSabiViewController.m in Sources */,
 				AAF57ED921235D7C00E0216B /* main.m in Sources */,
 				AAF57ECB21235D7A00E0216B /* AppDelegate.m in Sources */,
+				AAF57EEA21235F7A00E0216B /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
