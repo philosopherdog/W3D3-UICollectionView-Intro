@@ -17,17 +17,85 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZZD-OW-XBx">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="DFy-0B-hsc">
+                                    <size key="itemSize" width="165" height="124"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="ZEv-gN-TeC" customClass="WabiSabiCollectionViewCell">
+                                        <rect key="frame" x="0.0" y="50" width="165" height="124"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="165" height="124"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ceramic02" translatesAutoresizingMaskIntoConstraints="NO" id="MUc-F9-UJl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="165" height="124"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.95216627060000003" green="1" blue="0.350324146" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="MUc-F9-UJl" firstAttribute="top" secondItem="ZEv-gN-TeC" secondAttribute="top" id="4aE-3q-465"/>
+                                            <constraint firstAttribute="trailing" secondItem="MUc-F9-UJl" secondAttribute="trailing" id="Vrs-A2-MSW"/>
+                                            <constraint firstItem="MUc-F9-UJl" firstAttribute="leading" secondItem="ZEv-gN-TeC" secondAttribute="leading" id="Z28-ek-YRW"/>
+                                            <constraint firstAttribute="bottom" secondItem="MUc-F9-UJl" secondAttribute="bottom" id="eyi-Gc-Lcp"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="photoImageView" destination="MUc-F9-UJl" id="zg5-ov-Xcd"/>
+                                            <segue destination="P3R-0f-Lnm" kind="show" identifier="DetailViewController" id="xfU-ay-zfu"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="Cell" id="xOM-zD-9fy" customClass="HeaderCollectionReusableView">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pd4-Bh-rcU">
+                                            <rect key="frame" x="159" y="10.5" width="57" height="29"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="pd4-Bh-rcU" firstAttribute="centerX" secondItem="xOM-zD-9fy" secondAttribute="centerX" id="Dgh-Wb-004"/>
+                                        <constraint firstItem="pd4-Bh-rcU" firstAttribute="centerY" secondItem="xOM-zD-9fy" secondAttribute="centerY" id="leL-jE-1nL"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="label" destination="pd4-Bh-rcU" id="L4c-vw-0G0"/>
+                                    </connections>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="zLL-i9-UZz"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="mPb-cb-hpH"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZZD-OW-XBx" secondAttribute="bottom" id="BLu-VA-YOV"/>
+                            <constraint firstItem="ZZD-OW-XBx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ozm-8n-qdv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZZD-OW-XBx" secondAttribute="trailing" id="QOe-9C-D7b"/>
+                            <constraint firstItem="ZZD-OW-XBx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sMV-ia-UxV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="A3W-ep-fgG"/>
                     <connections>
-                        <segue destination="P3R-0f-Lnm" kind="show" identifier="DetailViewController" id="jGC-n9-E6n"/>
+                        <outlet property="collectionView" destination="ZZD-OW-XBx" id="KjW-3A-7wX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="806" y="-564"/>
+            <point key="canvasLocation" x="805.60000000000002" y="-564.46776611694156"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="PdL-Dr-3bv">
@@ -37,8 +105,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="owK-Pf-14v">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ceramic02" translatesAutoresizingMaskIntoConstraints="NO" id="owK-Pf-14v">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -50,6 +119,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UmP-6n-HY7"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="owK-Pf-14v" id="WRE-5J-dGx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RQE-m8-qJq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -74,4 +146,7 @@
             <point key="canvasLocation" x="127" y="-564"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ceramic02" width="1162" height="850"/>
+    </resources>
 </document>
